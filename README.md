@@ -5,6 +5,7 @@ Grazioso Salvare is a company that trains dogs for search-and-rescue operations 
 
 ## Database Commands (Mongo Shell and Screenshots): MongoImport and Authentication
 First, we import a CSV file containing the information required for the database. This is done through the following command:
+
 ```mongoimport --port <PORT#> --db AAC --collection animals ./aac_shelter_outcomes.csv```
 
 This command will import the .csv file into the database. A successful import is shown below:
