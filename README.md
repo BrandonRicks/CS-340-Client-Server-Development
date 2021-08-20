@@ -1,9 +1,31 @@
 # CS 340 PROJECT README: GRAZIOSO SALVARE PROGRAM
 
 ## About the Project/Project Title
-Grazioso Salvare is a company that trains dogs for search-and-rescue operations and requires a method to identify and categorize potential dogs for this purpose. To facilitate the company’s needs, this project is intended to implement functionality and interaction between client and server; specifically, an application that “can work with existing data from the animal shelters to identify and categorize available dogs”. 
+Grazioso Salvare is a company that trains dogs for search-and-rescue operations, and requires a method to identify and categorize potential dogs for this purpose. To facilitate the company’s needs, this project is intended to implement functionality and interaction between client and server; specifically, an application that “can work with existing data from the animal shelters to identify and categorize available dogs”. 
 
-## Database Commands (Mongo Shell and Screenshots): MongoImport and Authentication
+## Functionality
+This project combines the client side, server side, and middleware into full stack development. This project allows for filtered viewing of data, retrieved from the database using a Python module, and shown in an easy-to-use web dashboard. This dashboard comes with company branding, as well as widgets that offer visual representation of the data. The dashboard is also interactive, allowing for filtering options that respond dynamically.
+
+## Tools Used
+### Database is in MongoDB (https://www.mongodb.com/). 
+
+*MongoDB is a great tool for use in scalable applications and projects emphasizing agile methodologies. It is both document-oriented and NoSQL, which offers great flexibility and stability with many concurrent users. Combined with Python, database applications and modules can be developed quickly and relatively easily.*
+
+### Middleware was created with Python (https://www.python.org/). 
+
+*Combined with built-in functionality to MongoDB, Python is a great choice for programming language. The driver library PyMongo allows for compatibility between dictionaries and lists, allowing for easy manipulation and iteration functionality.*
+
+### Client-side dashboard was created with Jupyter Notebook (https://jupyter.org/). 
+
+*Jupyter Notebook is part IDE, part data science environment. It supports many languages, and as a web source application, offers easy-of-use and access as a web tool.*
+
+### Maps, graphs, and UI were created with Plotly and Dash (https://plotly.com/) 
+
+*Plotly is a graphing and analytics library that is functional with Python, among many other languages. Dash is a Python framework that is used for building web-based applications. Combined, these tools offer graphing and widgets within a web-based dashboard.*
+
+## Steps To Project Completion
+
+### Database Commands (Mongo Shell and Screenshots): MongoImport and Authentication
 First, we import a CSV file containing the information required for the database. This is done through the following command:
 
 ```mongoimport --port <PORT#> --db AAC --collection animals ./aac_shelter_outcomes.csv```
@@ -42,74 +64,67 @@ Confirmation of account login is shown below for both “admin” and “aacuser
 
  ![image](https://user-images.githubusercontent.com/79807877/129285387-033018f2-19fa-487b-a503-c266d9960e9f.png)
 
-## CRUD Python Module: CREATE, READ, UPDATE, DELETE Functionality
+### CRUD Python Module: CREATE, READ, UPDATE, DELETE Functionality
 This portion covers the CRUD functionality of the Python module, which will serve as the middleware “glue” for this software. CRUD is an acronym for CREATE, READ, UPDATE, and DELETE, and are the basic operations to manipulate the database and view its contents. The methods for this functionality are shown in screenshots below:
 
 Create:
 
- ![image](https://user-images.githubusercontent.com/79807877/129285434-f4fa33fa-636f-4bda-ac81-bc3619e54b28.png)
+![Screenshot_71](https://user-images.githubusercontent.com/79807877/130303183-86d3599a-2ead-4daf-bb91-69365f504e00.png)
 
 Read:
 
- ![image](https://user-images.githubusercontent.com/79807877/129285439-c79a433d-a0f1-4b77-af96-a1a383332d08.png)
+![Screenshot_72](https://user-images.githubusercontent.com/79807877/130303187-07ea2f55-644c-48ff-8e93-4715d757d10f.png)
 
 Update:
 
- ![image](https://user-images.githubusercontent.com/79807877/129285445-da9b15fb-2c8d-4073-b478-d47a22e22fa9.png)
+![Screenshot_73](https://user-images.githubusercontent.com/79807877/130303189-93e8aff6-7de1-4c41-91ad-b66ff8c018bc.png)
 
 Delete:
 
- ![image](https://user-images.githubusercontent.com/79807877/129285448-d5d0362d-1ef5-4833-9ab5-7e0300796660.png)
+![Screenshot_74](https://user-images.githubusercontent.com/79807877/130303192-c274f8c7-c612-4473-be3d-075ca92f6785.png)
 
-## CRUD Python Module (Python Code and Screenshots): Script to Test CRUD Functionality
-This portion covers the test script that will test each of these methods to ensure they’re working properly. This test script will run through Jupyter Notebook and output a confirmation. There will also be screenshots showing these modifications within the database. 
-Create test code:
+### Dashboard Interactivity
+This portion covers the interactivity of the dashboard, serving as the client-side. The user is able to interact with the dashboard and move around the map, as well as select individual data points within the dashboard. The dashboard also allows for filtering, based on 5 key requirements: Water Rescue, Mountain or Wilderness Rescue, Disaster or Individual Tracking, Elderly 15+, and a reset function, returning all widgets to an unfiltered state. These requirements are shown below:
 
-![image](https://user-images.githubusercontent.com/79807877/129285517-ac69422f-e734-4bec-b454-0edae902e691.png)
+Water Rescue
+
+![Screenshot_66 (2)](https://user-images.githubusercontent.com/79807877/130303258-4785ffd8-7a40-465f-87a8-de528db0b612.png)
+
+Mountain Rescue
+
+![Screenshot_67 (2)](https://user-images.githubusercontent.com/79807877/130303261-0272e5eb-a618-4726-9b50-37a4a5162625.png)
+
+Disaster Rescue
+
+![Screenshot_68 (2)](https://user-images.githubusercontent.com/79807877/130303268-0c2f88f6-20e5-4bf6-97c6-3d6c4469c39a.png)
+
+Elderly 15+
+
+![Screenshot_69 (2)](https://user-images.githubusercontent.com/79807877/130303270-9bb6f983-ba71-4aaf-bd78-7df6f70a18e3.png)
+
+Reset
  
-Create test output:
+![Screenshot_70 (2)](https://user-images.githubusercontent.com/79807877/130303278-f39a27cb-bd95-4818-b39b-530ae4f89e47.png)
 
-![image](https://user-images.githubusercontent.com/79807877/129285523-532e090b-fe5e-4469-95e2-81412965921c.png)
- 
-Create confirmation:
+## Challenges/Potewntial Issues
 
-![image](https://user-images.githubusercontent.com/79807877/129285538-7b8f725e-8394-4c7d-87da-5c8117440fea.png)
+The biggest challenge I faced making this project was functionality in the dashboard. I ran into occasional issues with connection as well, primarily due to connection between the dashboard and the database. Below are a few solutions to such issues:
 
-Read test code:
+*Authorization/Database Connectivity Issues*
 
-![image](https://user-images.githubusercontent.com/79807877/129285552-b76a9cdf-b1c8-4ed4-87e5-2c579897e942.png)
+If a user runs into issues with authorization when running the dashboard, check these possible solutions:
 
-Read output:
-
-![image](https://user-images.githubusercontent.com/79807877/129285565-9d882423-55f4-461c-809e-c6dee154de19.png)
-
-Update test code:
-
-![image](https://user-images.githubusercontent.com/79807877/129285583-53b20cb5-410e-4fda-be43-fcf38df2793f.png)
-
-Update output:
-
-![image](https://user-images.githubusercontent.com/79807877/129285593-7019e409-b90c-40fd-b37a-08c54c2f6e1d.png)
- 
-Update confirmation:
-
-![image](https://user-images.githubusercontent.com/79807877/129285605-fef7d571-c67f-4f17-87ba-e90da0de54e6.png)
- 
-Delete test code:
-
-![image](https://user-images.githubusercontent.com/79807877/129285624-93a7923b-d66b-4cac-839f-2d57cd3b9ed8.png)
-
-Delete output:
-
-![image](https://user-images.githubusercontent.com/79807877/129285633-9b73c16e-7f99-4708-9395-61c9bd101ec0.png)
-
-Delete confirmation:
-
-![image](https://user-images.githubusercontent.com/79807877/129285642-64863ec6-7450-4966-92fb-daa86577d451.png)
-
-As shown in the above screenshots, the test code creates, reads, updates, and deletes. First, a new entry is created using “data”. When reading this data, it is searched using the animal_id, and the returned to the user. Updating alters the name of the test data using the animal_id, and delete removes the data using the animal_id.
+- Make sure the username and password exist 
+- Make sure the username and password are correct
+- Check the port and host information
+- Make sure the dashboard and/or database process closed successfully. If not seek out the process id and stop the process
+- If you are able to start the database, but not connect, attempt to unalias mongo, and re-enter the port, using the following commands: 
+  - ```unalias mongo``` 
+  - ```mongo --port <PORT#>```
 
 ## Contact
 Brandon Ricks
 
+brandon.ricks@snhu.edu
 
+CS-340 Client/Server Development
