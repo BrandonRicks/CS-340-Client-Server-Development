@@ -17,7 +17,7 @@ This project combines the client side, server side, and middleware into full sta
 
 ### Client-side dashboard was created with Jupyter Notebook (https://jupyter.org/). 
 
-*Jupyter Notebook is part IDE, part data science environment. It supports many languages, and as a web source application, offers easy-of-use and access as a web tool.*
+*Jupyter Notebook is part IDE, part data science environment. It supports many languages, and as a web source application, offers ease-of-use and access as a web tool.*
 
 ### Maps, graphs, and UI were created with Plotly and Dash (https://plotly.com/) 
 
