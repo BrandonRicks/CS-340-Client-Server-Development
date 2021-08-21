@@ -106,7 +106,7 @@ Reset
  
 ![Screenshot_70 (2)](https://user-images.githubusercontent.com/79807877/130303278-f39a27cb-bd95-4818-b39b-530ae4f89e47.png)
 
-## Challenges/Potewntial Issues
+## Challenges/Potential Issues
 
 The biggest challenge I faced making this project was functionality in the dashboard. I ran into occasional issues with connection as well, primarily due to connection between the dashboard and the database. Below are a few solutions to such issues:
 
